@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+/* menu de hamburguesa */
+
+:root {
+  --red: #ff0000;
+  --black: #354046;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none !important;
+  outline: none !important;
+  text-decoration: none !important;
+  text-transform: capitalize;
+  font-weight: 400;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* barra de scroll */
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+  border-radius: 20px;
+  border: 3px solid var(--red);
+}
+
+/* barra de scroll */
+
+section {
+  padding: 5rem 10%;
+}
+
+.panel {
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--red);
+  transition: transform 0.3s ease;
+  /* de arriba */
+  /* transform: translate(0, -100%); */
+  transform: translate(100%);
+}
+
+.panel.is-active {
+  transform: translate(0, 0);
+}
+div .panels-btn {
+  position: fixed;
+  z-index: 999;
+  top: 1vh;
+  left: 1vh;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 10%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+}
+
+.menu {
+  margin-top: 20rem;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.menu a {
+  padding: 2rem;
+  width: inherit;
+  display: block;
+  font-size: 3rem;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  font-weight: bold;
+  color: var(--black);
+  background-color: #fff;
+}
+
+/* seccion de pie de pagina */
+
+.footer {
+  background: #c31432; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #240b36,
+    #c31432
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #240b36,
+    #c31432
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.footer p {
+  font-size: 1.5rem;
+  color: #eee;
+  padding: 1rem 1rem;
+}
+
+.footer img {
+  width: 30rem;
+}
+
+.footer .col-md-4 {
+  padding: 5rem;
+}
+
+.footer .col-md-4:nth-child(1) a {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.footer .col-md-4:nth-child(1) a:hover {
+  color: var(--black);
+}
+
+.footer .col-md-4:nth-child(1) a span {
+  color: var(--red);
+}
+
+.footer a {
+  font-size: 2rem;
+  color: #fff;
+  display: block;
+}
+
+.footer h3 {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.footer a:hover {
+  color: var(--red);
+}
+
+.footer .credit {
+  color: #fff;
+  width: 80%;
+  margin: 0;
+  padding: 2rem 0;
+  padding-bottom: 4rem;
+  border-top: 0.1rem solid #ccc !important;
+}
+
+.footer .credit span {
+  color: var(--red);
+}
+
+header .fa-times {
+  transform: rotate(180deg);
+}
+
+/*  */
+
+.heading-link {
+  text-align: center;
+  background: #c31432;
+  background: -webkit-linear-gradient(to left, #240b36, #c31432);
+  background: linear-gradient(to left, #240b36, #c31432);
+}
+
+.heading-link h3 {
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.heading-link p {
+  font-size: 2rem;
+  line-height: 2;
+  color: #fff;
+}
+
+.heading-link p a {
+  color: #eee;
+}
+
+.heading-link p a:hover {
+  color: #354046;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  color: #444;
+}
+
+/*  Acordeon*/
+
+/* Aligns the heading text to the center. */
+
+h1 {
+  text-align: center;
+}
+
+/* Sets the width for the accordion. Sets the margin to 90px on the top and bottom and auto to the left and right */
+
+.section-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.accordion {
+  width: 100%;
+  margin: 90px auto;
+  color: #fff;
+  background: #c31432;
+  background: -webkit-linear-gradient(to left, #240b36, #c31432);
+  background: linear-gradient(to left, #240b36, #c31432);
+  padding: 45px 45px;
+  border-radius: 10px;
+}
+
+.accordion .container {
+  position: relative;
+  margin: 10px 10px;
+}
+
+/* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Positions the plus sign 5px from the right. Centers it using the transform property. */
+
+.accordion .label::before {
+  content: "+";
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  font-size: 30px;
+  transform: translateY(-50%);
+}
+
+/* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+
+.accordion .content {
+  position: relative;
+  background: #c31432;
+  background: -webkit-linear-gradient(to left, #240b36, #c31432);
+  background: linear-gradient(to left, #240b36, #c31432);
+  height: 0;
+  font-size: 20px;
+  text-align: justify;
+  width: 780px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* Adds a horizontal line between the contents */
+
+.accordion hr {
+  width: 100;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+
+/* Unhides the content part when active. Sets the height */
+
+.accordion .container.active .content {
+  height: 150px;
+}
+
+/* Changes from plus sign to negative sign once active */
+
+.accordion .container.active .label::before {
+  content: "-";
+  font-size: 50px;
+}
+
+/* loader o cargando */
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.loader-container h1 {
+  font-size: 5rem;
+  font-family: "Bungee", cursive;
+}
+
+.loader-container.fade-out {
+  top: -120%;
+}
